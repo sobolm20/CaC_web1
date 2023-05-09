@@ -6,10 +6,9 @@ async function fetchApi() {
         let urlApi = 'https://www.themealdb.com/api/json/v1/1/search.php?s'
         let fetchResponse = await fetch(urlApi)
         let response = await fetchResponse.json()
-        food = [...response.events]
+        food = [...response.meals]
         console.log(food);
-        currentDate = response.currentDate;
-        printCards('allfoods',response.events)
+        printCards('allfoods',response.meals)
         return response
     } catch(error){
         console.log(error);
@@ -25,12 +24,12 @@ function printCards(){
             let listcard = 
             `
             <div class="card" style="width: 18rem;">
-                <img src=${card.image} class="card-img-top img-fit" alt=${card.name}>
+                <img src=${card.strMealThumb} class="card-img-top img-fit" alt=${card.strMeal}>
                 <div class="card-body">
-                    <h5 class="card-title">${card.name}</h5>
-                    <p class="card-text">${card.description}</p>
-                    <h6 class="card-subtitle mb-2 text-muted">${card.price}</h6>
-                    <a class="btn btn-primary" href="details.html?id=${card.id}" role="button">Details</a>
+                    <h5 class="card-title">${card.strMeal}</h5>
+                    <p class="card-text">${card.strTags}</p>
+                    <h6 class="card-subtitle mb-2 text-muted"></h6>
+                    <a class="btn btn-primary" href="details.html?id=${card.idMeal}" role="button">Details</a>
                 </div>
             </div>
             `

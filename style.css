@@ -81,6 +81,32 @@ body, header, main, footer {
     color: rgb(241, 21, 124);
 }
 
+.container-box{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-box2{
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.eventos{
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.img-fit{
+    height: 250px;
+    object-fit: cover;
+}
+
+
 /*desecho 
 /*float: inline-end;
     margin: 0.5rem 0 0.5rem 1rem;
