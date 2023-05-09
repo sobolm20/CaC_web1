@@ -81,7 +81,7 @@ body, header, main, footer {
     color: rgb(241, 21, 124);
 }
 
-.container-box{
+.container-box1{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
