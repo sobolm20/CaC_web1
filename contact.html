@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carta</title>
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
 </head>
 <body>
     <header class="container-box">
@@ -23,23 +26,43 @@
     </header>
     <main>
         <div>
-            <section>
-		<form action="" method="">
-			<fieldset>
-				<legend><b> Comentarios </b></legend>
-				<label for="nombre">Nombre</label>
-				<input type="text" name="nombre" id="nombre">
-				<label for="correo">Correo Electronico</label>
-				<input type="text" name="correo" id="correo">
-				<br></br>
-				<label for="comentarios">Comentarios</label>
-				<input type="text" name="comentarios" id="comentarios">
+            <section class="d-flex justify-content-md-center">
+		        <div class="card col-sm-5 p-3">
+			        <div class="card-header">
+				        <h4 class="card-title">Contacto</h4>
+			        </div>
+			        <div class="card-body">
+				        
+			        </div>
+ 
+			        <div class="mb-2">
+				        <form action="">
+					        <div class="mb-2">
+						        <label for="nombre"><b><em>Nombre</em></b></label>
+						        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="nombre" required>
+					        </div>
+					        <div class="mb-2">
+						        <label for="correo"><b><em>Tu Correo electrónico</em></b></label>
+						        <input type="text" class="form-control" name="correo" id="correo" placeholder="email@correo.com" required>
+					        </div>
+					        <div class="mb-2">
+						        <label for="comentarios"><b><em>Comentarios</em></b></label>
+						        <textarea name="comentarios" id="comentarios" class="form-control" placeholder="Escribe aquí tus comentarios"></textarea>
+					        </div>
+					        <div class="mb-2">
+						        <button class="btn btn-success">Enviar</button>
+					        </div>
+				        </form>
+			        </div>
+		        </div>
 
-			</fieldset>
-		</form>
-            </section>
+	        </section>
         </div>
-        <aside></aside>
+        <aside>
+            <section class="d-flex justify-content-md-center">
+                <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=mendoza&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://capcuttemplate.org/"></a></div><style>.mapouter{position:relative;text-align:right;width:600px;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:600px;height:400px;}.gmap_iframe {width:600px!important;height:300px!important;}</style></div>
+            </section>
+        </aside>
     </main>
     <footer>
 
