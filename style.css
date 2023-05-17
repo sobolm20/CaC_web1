@@ -132,6 +132,30 @@ body, header, main, footer {
     background-color: rgb(38, 38, 227);
 }
 
+.container-cart {
+    border: 1px white solid;
+    background-color: white;
+}
+
+.tabla{
+    display: flex;
+    align-content: center;
+    background-color: white;
+    color: black;
+    
+}
+
+
+
+
+
+
+
+.prueba1{
+    color: blue;
+}
+
+
 /*desecho 
 /*float: inline-end;
     margin: 0.5rem 0 0.5rem 1rem;

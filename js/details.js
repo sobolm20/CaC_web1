@@ -22,6 +22,7 @@ console.log(params)
 let id_query = params.get('id')
 console.log(id_query);
 
+
 let cards = []
 
 function defineDetails(array_food){
