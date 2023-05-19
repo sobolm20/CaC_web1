@@ -30,6 +30,17 @@ body, header, main, footer {
     object-fit: cover;
 }
 
+#subtitulo {
+    width: 250px;
+    height: 120px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    border-radius: 10%;
+    display: flex;
+    justify-content: space-between;
+    object-fit: cover;
+}
+
 .header-menu {
     display: flex;
     justify-content: flex-end;
@@ -138,24 +149,70 @@ body, header, main, footer {
 }
 
 .tabla{
+    width: 100%;
     display: flex;
-    align-content: center;
-    background-color: white;
-    color: black;
-    
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2px;
+    font-size: 20px;
 }
 
+thead{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 
+tbody{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 
+.titulotabla{
+    font-size: 40px;
+}
 
+.titulocol1{
+    font-size: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
 
+.titulocol2{
+    font-size: 30px;
+}
 
+th{
+    padding: 2px;
+    width: 25%;
+}
 
-.prueba1{
+tr{
+    border: 1px;
+    padding: 2px;
+}
+
+td{
+    border: 1px;
+    padding: 2px;
+    width: 25%;
+}
+
+.celda1{
     color: blue;
+    text-align: start;
+    font-size: 20px;
+    font-family: Calibri, cursive;
 }
 
+.celda2{
+    color: blue;
+    text-align: center;
+}
 
-/*desecho 
-/*float: inline-end;
-    margin: 0.5rem 0 0.5rem 1rem;
+.celda3{
+    color: blue;
+    text-align: end;
+    font-family: Calibri, cursive;
+}

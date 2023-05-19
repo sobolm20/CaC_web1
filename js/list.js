@@ -21,8 +21,9 @@ function printTablelist(array){
             let tablecard = 
             `
             <tr>
-                <td colspan="4" class="prueba1">${each.strMeal}</td>
-                <td colspan="2" class="prueba1">${((each.idMeal)/1000)}</td>
+                <td colspan="2" class="celda1">${each.strMeal}</td>
+                <td colspan="2" class="celda2">....................</td>
+                <td colspan="2" class="celda3">${((each.idMeal)/1000).toFixed(3)}</td>
             </tr>
             `
 

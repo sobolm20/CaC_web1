@@ -7,6 +7,7 @@ async function fetchApi() {
         food = [...response.meals]
         console.log(food);
         defineDetails(food)
+        printCards(defineDetails(), 'detailscomp')
         return response
     } catch(error){
         console.log(error);
@@ -43,6 +44,13 @@ function defineDetails(array_food){
       </div>
     </div>
 `
-let gencard = document.getElementById('detailscomp')
-gencard.innerHTML = cards
+let filtradocard = document.getElementById('detailscomp')
+filtradocard.innerHTML = cards.join('')
 }
+
+function printCards(array, id){
+  let filtrado = defineDetails(array)
+  let basecard = document.getElementById(id)
+  basecard.innerHTML = filtrado.join('')
+}
+
