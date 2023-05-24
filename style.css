@@ -209,6 +209,152 @@ td{
     font-size: 20px;
     font-family: Calibri, cursive;
 }
+/*
+=============== 
+Comentarios y mapa
+===============
+*/
+.formulario {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.contact-container {
+    width: 667px;
+    height: 800px;
+    margin-left: 15px;
+    margin-right: auto;
+    margin-top: 10px;
+    color: #e2d7e2;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 792px) {
+    .contact-container {
+      grid-template-columns: 1fr 350px;
+      align-items: center;
+    }
+
+}
+
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #e2d7e2;
+    padding-top: 20px;
+}
+/* 
+=============== 
+Estilos para Validacion 
+===============
+*/
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929; /*  Cambia color etiqueta por rojo si es incorrecto */
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .form-control {
+	border: 3px solid #bb2929;
+}
+.formulario__input-error-activo {
+	display: block;
+}
+.formulario__input-error {
+	font-size: 12px;
+	margin-bottom: 10px;
+	display: none;
+    color:aquamarine
+}
+.invalid {
+    border: solid 1px red;
+    box-shadow: 0 0 10px red;
+}
+.error {
+    color: red;
+    display: block;
+}
+
+/*
+=============== 
+Footer
+===============
+*/
+
+.pie-pagina{
+    width: 100%;
+    background-color: #0a141d;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: aqua;
+}
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}
 
 .celda2{
     color: blue;
