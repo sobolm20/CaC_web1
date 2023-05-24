@@ -1,17 +1,17 @@
+let food = []
 
 async function fetchApi() {
-    try{
-        let urlApi = 'https://www.themealdb.com/api/json/v1/1/search.php?s'
-        let fetchResponse = await fetch(urlApi)
-        let response = await fetchResponse.json()
-        food = [...response.meals]
-        console.log(food);
-        defineDetails(food)
-        printCards(defineDetails(), 'detailscomp')
-        return response
-    } catch(error){
-        console.log(error);
-    }
+  try{
+      let urlApi = 'https://www.themealdb.com/api/json/v1/1/search.php?s'
+      let fetchResponse = await fetch(urlApi)
+      let response = await fetchResponse.json()
+      food = [...response.meals]
+      console.log(food);
+      printCards('detailscomp', food)
+      return response
+  } catch(error){
+      console.log(error);
+  }
 }
 
 fetchApi()
@@ -24,33 +24,34 @@ let id_query = params.get('id')
 console.log(id_query);
 
 
-let cards = []
+let cardfood = []
 
-function defineDetails(array_food){
-    let foodfilter = array_food.filter(each => each.id == id_query)[0];
-    cards = 
-    `
-    <div class="col-md-4">
-      <img src="${foodfilter.strMealThumb}" class="img-fluid rounded-start" alt="${foodfilter.strMeal}">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title text-light">Dish name: ${foodfilter.strMeal}</h5>
-        <p class="card-text text-light">Category: ${foodfilter.strCategory}</p>
-        <p class="card-text text-light">Origin: ${foodfilter.strArea}</p>
-        <p class="card-text text-light">Ingredients: ${foodfilter.strIngredient1}; ${foodfilter.strIngredient2}; ${foodfilter.strIngredient3}; ${foodfilter.strIngredient4}; ${foodfilter.strIngredient5}</p>
-        <h6 class="card-subtitle mb-2 text-muted">${foodfilter.price}</h6>
-        <a class="btn btn-primary" href="details.html?id=${foodfilter.idMeal}" role="button">Details</a>
-      </div>
-    </div>
-`
-let filtradocard = document.getElementById('detailscomp')
-filtradocard.innerHTML = cards.join('')
+function printCards(){
+  let menusel = food.filter(each => each.idMeal === id_query)[0]
+  console.log(menusel);
+  
+          let listcard = 
+          `
+          <div class="card" style="width: 18rem;">
+              <img src=${menusel.strMealThumb} class="img-fit" alt=${menusel.strMeal}>
+              <div>
+                <div>
+                  <h5 class="card-text">Dish name: ${menusel.strMeal}</h5>
+                  <p class="card-text">Category: ${menusel.strCategory}</p>
+                  <p class="card-text">Origin: ${menusel.strArea}</p>
+                  <p class="card-text">Ingredients: ${menusel.strIngredient1}; ${menusel.strIngredient2}; ${menusel.strIngredient3}; ${menusel.strIngredient4}; ${menusel.strIngredient5}</p>
+                  <h6 class="card-text">U$S  ${((menusel.idMeal)/1000).toFixed(3)}</h6>
+                  <a class="btnd" href="index.html" role="button">Return</a>
+                </div>
+              </div>
+          </div>
+          `
+
+          cardfood.push(listcard);
+          console.log(cardfood);
+  
+  let basecard = document.getElementById('detailscomp');
+  basecard.innerHTML = cardfood.join('');
 }
 
-function printCards(array, id){
-  let filtrado = defineDetails(array)
-  let basecard = document.getElementById(id)
-  basecard.innerHTML = filtrado.join('')
-}
-
+printCards();

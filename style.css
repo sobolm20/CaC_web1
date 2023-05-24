@@ -143,6 +143,10 @@ body, header, main, footer {
     background-color: rgb(38, 38, 227);
 }
 
+.card-text{
+    color: black;
+}
+
 .container-cart {
     border: 1px white solid;
     background-color: white;

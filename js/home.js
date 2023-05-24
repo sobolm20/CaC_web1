@@ -25,9 +25,9 @@ function printCards(){
             `
             <div class="card" style="width: 18rem;">
                 <img src=${card.strMealThumb} class="img-fit" alt=${card.strMeal}>
-                <div class="body-card">
-                    <h2 class="card-title">${card.strMeal}</h2>
-                    <h3 class="card-subtitle mb-2 text-muted">${card.strCategory}</h3>
+                <div>
+                    <h2>${card.strMeal}</h2>
+                    <h3>${card.strCategory}</h3>
                     <a class="btnd" href="details.html?id=${card.idMeal}" role="button">Details</a>
                 </div>
             </div>
