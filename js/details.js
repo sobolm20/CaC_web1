@@ -32,18 +32,20 @@ function printCards(){
   
           let listcard = 
           `
-          <div class="card" style="width: 18rem;">
-              <img src=${menusel.strMealThumb} class="img-fit" alt=${menusel.strMeal}>
+          <div class="card" style="width: 16rem;">
+            <div>
               <div>
-                <div>
-                  <h5 class="card-text">Dish name: ${menusel.strMeal}</h5>
-                  <p class="card-text">Category: ${menusel.strCategory}</p>
-                  <p class="card-text">Origin: ${menusel.strArea}</p>
-                  <p class="card-text">Ingredients: ${menusel.strIngredient1}; ${menusel.strIngredient2}; ${menusel.strIngredient3}; ${menusel.strIngredient4}; ${menusel.strIngredient5}</p>
-                  <h6 class="card-text">U$S  ${((menusel.idMeal)/1000).toFixed(3)}</h6>
-                  <a class="btnd" href="index.html" role="button">Return</a>
-                </div>
+                <img src=${menusel.strMealThumb} class="img-fit" alt=${menusel.strMeal}>
               </div>
+              <div>
+                  <h5 class="c-text">Dish name: ${menusel.strMeal}</h5>
+                  <p class="c-text">Category: ${menusel.strCategory}</p>
+                  <p class="c-text">Origin: ${menusel.strArea}</p>
+                  <p class="c-text">Ingredients: ${menusel.strIngredient1}; ${menusel.strIngredient2}; ${menusel.strIngredient3}; ${menusel.strIngredient4}; ${menusel.strIngredient5}</p>
+                  <h6 class="c-text">U$S  ${((menusel.idMeal)/1000).toFixed(3)}</h6>
+                  <a class="btnd" href="index.html" role="button">Return</a>
+              </div>
+            </div>
           </div>
           `
 

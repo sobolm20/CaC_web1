@@ -23,7 +23,7 @@ function printCards(){
     for (let card of food){
             let listcard = 
             `
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 16rem">
                 <img src=${card.strMealThumb} class="img-fit" alt=${card.strMeal}>
                 <div>
                     <h2>${card.strMeal}</h2>
